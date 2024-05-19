@@ -3,53 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>빽다방</title>
 </head>
 <body>    
-    <a href="https://google.com" target="_blank" title="빽다방">
-    <img src="./image/paik.png">
-    </a>
+    <style>
+        table {
+            width: 30%;            
+        }
+        th, td {            
+            height: 50px;
+            text-align: center;
+        }
+        .calendar {
+            width: 30%;
+            text-align: center;
+        }
+    </style>
 
-    <img src="data:image/jpeg;base64,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" alt="바나나">
+    <div class="calendar">
+    <h2 style="color: green;">2019년 6월</h2>             
+    </div>
+    <table>        
+    <tr>           
+        <td style="color: red;">일</td>
+        <td>월</td>
+        <td>화</td>
+        <td>수</td>
+        <td>목</td>
+        <td>금</td>
+        <td>토</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td style="color: red;">2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td style="color: red;">9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td style="color: red;">16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td style="color: red;">23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+    </tr>
+    <tr>
+        <td style="color: red;">30</td>
+    </tr>
+</table>
 
-    <h1>빽다방</h1>
-
-    <ul>
-        <li>
-            <h2>아메리카노</h2>
-            <ol>
-                <li>R: 3000</li>
-                <li>L: 3500</li>
-            </ol>
-        </li>
-
-        <li>
-            <h2>카페라떼</h2>
-            <ol>
-                <li>R: 3000</li>
-                <li>L: 3500</li>
-            </ol>
-        </li>
-
-        <li>
-            <h2>아이스티</h2>
-            <ol>
-                <li>R: 3000</li>
-                <li>L: 3500</li>
-            </ol>
-        </li>
-
-        <li>
-            <h2>밀크티</h2>
-            <ol>
-                <li>R: 3000</li>
-                <li>L: 3500</li>
-            </ol>
-        </li>
-    </ul>
-    <hr>
-    <h2>음료설명</h2>
-    <p>아메리카노는 <b>물</b>에 에스프레소 <em>샷</em>을 탄 음료입니다.</p>
-    <p>카페라떼는 <b>우유</b>에 에스프레소 <i>샷</i>을 탄 음료입니다.</p>
 </body>
 </html>
