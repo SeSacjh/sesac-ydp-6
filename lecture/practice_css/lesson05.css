@@ -1,11 +1,11 @@
 [disabled] {
-    background-color: red;
+    background-color: red;   
 }
 
 [placeholder="이름"] {
     background-color: orange;
 }
 
-input:not([placeholder]) {
+input:not[(placeholder)] {
     background-color: blue;
 }
