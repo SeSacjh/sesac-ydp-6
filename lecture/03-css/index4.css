@@ -1,0 +1,77 @@
+.div1{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+}
+/* 사용자 행동에 따라 변화하는 가상클래스선택자 */
+/* :hover = 요소에 마우스를 올렸을 때 변화가 지속, 마우스를 내렸을 때 해제됨 */
+
+.div1:hover{
+    background-color: hotpink;
+    width: 150px;
+    height: 150px;
+}
+
+/* :active = 요소를 마우스로 클릭하고 있는 동안  */
+.div1:active{
+    background-color: brown;
+    width: 200px;
+}
+
+/*
+    :focus = 요소에 포커스가 되었을 때
+    인풋태그 안에 마우스로 클릭해서 포커스 되었을 때 변화
+*/
+
+input:focus{
+    background-color: violet;
+    color: lightblue;
+    outline-color: yellowgreen;
+}
+
+.links > a:hover{
+    background-color: coral;
+}
+
+.links > a:visited{
+    /* a:visited = 방문해서 변화는 글자색을 변경 */
+    color: red;
+}
+
+/* 요소 상황에 따른 가상 클래스 선택자 */
+.zoo > *{
+    background-color: green;
+    color: white;
+}
+
+/* 
+    #1. E:first-child : E(요소)가 첫번째 요소라면, 별표 생략가능
+*/
+
+.zoo > *:first-child {
+    background-color: red;
+}
+
+/* 
+    #2. E:last-child : E(요소)가 마지막 요소라면, li 생략가능
+*/
+
+.zoo > li:last-child {
+    background-color: black;
+}
+
+/* 
+    #3. E:nth-child(n) : E(요소)가 n번째 요소라면
+*/
+
+.zoo > *:nth-child(2) {
+    background-color: aqua;
+}
+
+/* 
+    #4. E:not(XYZ) : XYZ가 아닌 요소 선택
+*/
+
+.zoo > *:not(div) {
+    background-color: pink;
+}

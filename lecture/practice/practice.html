@@ -3,84 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 실습</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
-<body>    
-    <style>
-        table {
-            width: 30%;            
-        }
-        th, td {            
-            height: 50px;
-            text-align: center;
-        }
-        .calendar {
-            width: 30%;
-            text-align: center;
-        }
-    </style>
-
-    <div class="calendar">
-    <h2 style="color: green;">2019년 6월</h2>             
+<body>
+    <h1>복합선택자 사용연습</h1>
+    <p>동물원에 왔어요</p>
+    <div class="zoo">
+        <ul>
+            <span>여긴 사파리!</span>
+            <li>곰</li>
+            <li id="tiger">호랑이</li>
+            <li>팬더</li>
+            <span class="lion">사자1</span>
+            <li class="lion">사자2</li>
+            <li>사육사 allie</li>
+            <li>사육사 진형</li>
+        </ul>
+        <span class="lion">사파리 밖의 사자</span>
     </div>
-    <table>        
-    <tr>           
-        <td style="color: red;">일</td>
-        <td>월</td>
-        <td>화</td>
-        <td>수</td>
-        <td>목</td>
-        <td>금</td>
-        <td>토</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td style="color: red;">2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-    </tr>
-    <tr>
-        <td style="color: red;">9</td>
-        <td>10</td>
-        <td>11</td>
-        <td>12</td>
-        <td>13</td>
-        <td>14</td>
-        <td>15</td>
-    </tr>
-    <tr>
-        <td style="color: red;">16</td>
-        <td>17</td>
-        <td>18</td>
-        <td>19</td>
-        <td>20</td>
-        <td>21</td>
-        <td>22</td>
-    </tr>
-    <tr>
-        <td style="color: red;">23</td>
-        <td>24</td>
-        <td>25</td>
-        <td>26</td>
-        <td>27</td>
-        <td>28</td>
-        <td>29</td>
-    </tr>
-    <tr>
-        <td style="color: red;">30</td>
-    </tr>
-</table>
-
+    <p class="lion">야생의 사자</p>
 </body>
 </html>
