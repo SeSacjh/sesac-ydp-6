@@ -1,0 +1,53 @@
+.container {
+    position: absolute;
+    display: flex;
+    background-color: lightgray;    
+    width: 70%;
+    height: 70%;
+}
+
+img {
+    width: 200px;
+    height: 250px;    
+    transform: skewY(30deg);
+    transition-duration: 1s;
+}
+
+.dog {
+    position: absolute;
+    left: 20%;
+    top: 100px;
+    z-index: 8;
+}
+
+.cat {
+    position: absolute;
+    left: 40%;
+    top: 80px;
+    z-index: 6;
+}
+
+.ham {
+    position: absolute;
+    left: 60%;
+    top: 60px;
+    z-index: 4;
+}
+
+.dog img:hover {    
+    transform: skewX(0deg);
+    transition: 1s;
+    z-index: 8;
+}
+
+.cat img:hover {    
+    transform: skewX(0deg);
+    transition: 1s;
+    z-index: 12;
+}
+
+.ham img:hover {    
+    transform: skewX(0deg);
+    transition: 1s;
+    z-index: 4;
+}

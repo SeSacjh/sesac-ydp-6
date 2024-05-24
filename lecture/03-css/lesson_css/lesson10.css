@@ -1,0 +1,76 @@
+.backgroundI {
+    width: 400px;
+    height: 400px;
+    background-image: url("./image/b.png");
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;    
+}
+
+.div1_1 {
+    left: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;                
+    background-color: white;
+    border-radius: 50%;
+}
+
+.div1_2 {
+    left: 20px;
+    top: 30px;
+    width: 25px;
+    height: 25px;                
+    background-color: black;
+    border-radius: 50%;
+}
+
+
+.div1 {
+    top: 100px;
+    left: 100px;
+    background-color: darkblue;
+    z-index: 12;
+    border-radius: 50%;
+    position: relative;
+}
+
+.div2 {
+    top: 160px;
+    left: 150px;
+    background-color: blue;
+    z-index: 16;
+    border-radius: 50%;
+}
+
+.div3 {
+    top: 200px;
+    left: 190px;
+    background-color: rgb(69, 69, 255);
+    z-index: 20;
+    border-radius: 50%;
+}
+
+.div4 {
+    top: 240px;
+    left: 230px;
+    background-color: rgb(139, 139, 255);
+    z-index: 24;
+    border-radius: 50%;
+}
+
+.div5 {
+    top: 280px;
+    left: 270px;
+    background-color: rgb(193, 193, 255);
+    z-index: 28;
+    border-radius: 50%;
+}

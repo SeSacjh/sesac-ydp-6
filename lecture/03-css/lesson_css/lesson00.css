@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Ownglyph_noocar-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_noocar-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h3, button{
+    font-family: 'Ownglyph_noocar-Rg';
+}
+
+h3:hover {
+    background-color: black;
+    color: white;
+}
+
+textarea {
+    resize: none;
+}
+
+input[id="red"]:checked + label[for="red"] {
+    background-color: red;
+    color: white;    
+}

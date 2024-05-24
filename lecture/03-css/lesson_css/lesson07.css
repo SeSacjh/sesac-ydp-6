@@ -1,0 +1,31 @@
+.one {    
+    width: 200px;
+    height: 200px;     
+    border-style: solid;
+    border-width: 4px 8px 12px 16px;    
+}
+
+.two {    
+    width: 200px;
+    height: 200px; 
+    border-style: solid dotted double groove;
+    border-color: black;    
+    border-width: 12px;    
+}
+
+.three {
+    width: 200px;
+    height: 200px; 
+    border-style: solid;    
+    border-color: black red green blue;
+    border-width: 12px;
+}
+
+.four {    
+    width: 200px;
+    height: 200px;    
+    border-style: solid double dashed dotted;
+    border-width: 12px;
+    border-color: red blue skyblue purple;
+}
+
