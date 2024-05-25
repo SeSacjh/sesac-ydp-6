@@ -3,6 +3,7 @@ div {
     height: 100px;
     background-color: black;
     color: white;
+    overflow: scroll;
 }
 
 div:hover {

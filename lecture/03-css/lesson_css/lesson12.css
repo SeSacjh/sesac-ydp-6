@@ -1,9 +1,9 @@
 .container {
-    position: absolute;
+    width: 1000px;
+    height: 500px;    
     display: flex;
-    background-color: lightgray;    
-    width: 70%;
-    height: 70%;
+    background-color: lightgray;   
+    position: relative;
 }
 
 img {
@@ -11,43 +11,39 @@ img {
     height: 250px;    
     transform: skewY(30deg);
     transition-duration: 1s;
+    position: absolute;
 }
 
-.dog {
-    position: absolute;
+.tiger {
     left: 20%;
     top: 100px;
-    z-index: 8;
-}
-
-.cat {
+    z-index: 1;
     position: absolute;
-    left: 40%;
-    top: 80px;
-    z-index: 6;
 }
 
 .ham {
+    left: 30%;
+    top: 100px;
+    z-index: 2;
     position: absolute;
-    left: 60%;
-    top: 60px;
-    z-index: 4;
 }
 
-.dog img:hover {    
-    transform: skewX(0deg);
-    transition: 1s;
-    z-index: 8;
+.lion {
+    left: 40%;
+    top: 100px;
+    z-index: 3;
+    position: absolute;
 }
 
-.cat img:hover {    
+.tiger img:hover, .ham img:hover, .lion img:hover {    
     transform: skewX(0deg);
     transition: 1s;
-    z-index: 12;
 }
 
-.ham img:hover {    
-    transform: skewX(0deg);
-    transition: 1s;
+.ham:hover {
+    z-index: 5;
+}
+
+.tiger:hover {    
     z-index: 4;
 }

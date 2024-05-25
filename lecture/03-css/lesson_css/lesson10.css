@@ -1,76 +1,97 @@
-.backgroundI {
-    width: 400px;
+.container {
+    width: 400px;    
     height: 400px;
-    background-image: url("./image/b.png");
+    position: relative;
+}
+
+.glass {
+    width: 400px;    
+    height: 400px;
+    background-image: url("./image/glass.png");
     background-repeat: no-repeat;
     position: absolute;
 }
 
-div {
+.worm_head {
+    top: 70px;
+    left: 70px;
     width: 100px;
     height: 100px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 100px;
-    position: absolute;    
-}
-
-.div1_1 {
-    left: 20px;
-    top: 20px;
-    width: 50px;
-    height: 50px;                
-    background-color: white;
     border-radius: 50%;
-}
-
-.div1_2 {
-    left: 20px;
-    top: 30px;
-    width: 25px;
-    height: 25px;                
-    background-color: black;
-    border-radius: 50%;
-}
-
-
-.div1 {
-    top: 100px;
-    left: 100px;
+    border: 0px solid;
     background-color: darkblue;
-    z-index: 12;
-    border-radius: 50%;
-    position: relative;
+    position: absolute;
+    z-index: 2;
 }
 
-.div2 {
-    top: 160px;
-    left: 150px;
+.worm_eye {
+    top: 10px;
+    left: 13px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0px solid;
+    background-color: white;
+    position: absolute;
+    z-index: 7;
+}
+
+.worm_eyeball {
+    top: 13px;
+    left: 13px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 0px solid;
+    background-color: black;
+    position: absolute;
+    z-index: 8;
+}
+
+.worm1 {    
+    top: 120px;
+    left: 120px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 0px solid;    
     background-color: blue;
-    z-index: 16;
-    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
 }
 
-.div3 {
-    top: 200px;
-    left: 190px;
-    background-color: rgb(69, 69, 255);
-    z-index: 20;
+.worm2 {    
+    top: 170px;
+    left: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    border: 0px solid;    
+    background-color: rgb(52, 52, 255);
+    position: absolute;
+    z-index: 4;
 }
 
-.div4 {
-    top: 240px;
-    left: 230px;
-    background-color: rgb(139, 139, 255);
-    z-index: 24;
+.worm3 {    
+    top: 220px;
+    left: 170px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    border: 0px solid;    
+    background-color: rgb(121, 121, 255);
+    position: absolute;
+    z-index: 5;
 }
 
-.div5 {
-    top: 280px;
-    left: 270px;
-    background-color: rgb(193, 193, 255);
-    z-index: 28;
+.worm4 {    
+    top: 270px;
+    left: 220px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    border: 0px solid;    
+    background-color: rgb(183, 183, 255);
+    position: absolute;
+    z-index: 6;
 }
