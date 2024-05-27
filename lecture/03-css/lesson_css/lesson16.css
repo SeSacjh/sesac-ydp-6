@@ -1,0 +1,16 @@
+.paragraph {        
+    animation: sentence 4s infinite;
+    width: 100%;
+}
+
+@keyframes sentence {
+    from {        
+        margin-left: 100px;
+        width: 300%;
+    }
+
+    to {
+        left: 0;    
+        width: 100%;
+    }
+}

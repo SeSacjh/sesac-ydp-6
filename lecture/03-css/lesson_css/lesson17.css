@@ -1,0 +1,60 @@
+.container {
+    top: 500px;
+}
+
+.top {
+    width: 100px;
+    height: 100px;
+    left: 650px;
+    background-color: plum;
+    border: 1px transparent black;
+    display: flex;    
+    border-radius: 50%;
+    position: relative;
+}
+
+.mid {
+    width: 100px;
+    height: 200px;
+    left: 580px;    
+    background-color: plum;
+    border: 1px transparent black;
+    border-radius: 200% 50px 0px 0px;
+    position: relative;
+}
+
+.shoes1 {
+    top: 450px;
+    width: 50px;
+    height: 20px;
+    background-color: plum;
+    border: 1px transparent black;
+    border-radius: 20px 150% 0px 0px;        
+    left: 650px;
+    position: absolute;
+}
+
+.shoes2 {
+    width: 50px;
+    height: 20px;
+    background-color: plum;
+    border: 1px transparent black;
+    border-radius: 20px 150% 0px 0px;    
+    left: 600px;
+    position: absolute;
+}
+
+.container {
+    margin: 0 auto;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: 300px;
+    }
+}
