@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 미디어쿼리</title>
+    <link rel="stylesheet" href="lesson05.js">
+    <style>
+        @media (min-width: 501px) {
+            body {
+                background-color: skyblue;                
+            }
+        }
+
+        @media (max-width: 300px) {
+            body {
+                background-color: orange;
+            }
+        }            
+
+        @media (max-height: 300px) {
+            p {
+                font-style:italic;
+            }
+        }
+
+        @media (min-height: 500px) {
+            p {
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>미디어 쿼리 실습</p>
+</body>
+</html>
