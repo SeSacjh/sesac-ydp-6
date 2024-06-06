@@ -18,8 +18,7 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading"></div>
       <h6>Everything will be Happy : )</h6>
-      <div class="list-group list-group-flush">        
-        <a href="#" class="list-group-item list-group-item-action bg-light">Write</a>        
+      <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>        
         <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
@@ -62,46 +61,80 @@
         </div>
       </nav>
       <div class="container-fluid">
-        <h1 class="mt-4" style="text-align: center;">Healing Cafe</h1><br>        
+        <h1 class="mt-4" style="text-align: center;">Healing Forest</h1><br>        
         <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
         <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut, quia esse error nam numquam labore quisquam aut debitis. Molestias quisquam alias nihil sequi velit recusandae mollitia expedita optio pariatur.
         </p>
       </div>
-      <main>
-        <section class="menu">        
-            <div class="menu-item">
-                <img src="menu1.jpg" alt="메뉴1">
-                <h3>메뉴 1</h3>
-                <p>메뉴 1 설명</p>
-            </div>
-            <div class="menu-item">
-                <img src="menu2.jpg" alt="메뉴2">
-                <h3>메뉴 2</h3>
-                <p>메뉴 2 설명</p>
-            </div>
-            <div class="menu-item">
-                <img src="menu3.jpg" alt="메뉴3">
-                <h3>메뉴 3</h3>
-                <p>메뉴 3 설명</p>
-            </div>
-            
-        </section>
-    </main>
-    <hr>
 
+    <!-------- Main 구간 ---------->
+    <main>
+      <section class="menu">
+        <div class="menu-item">
+          <img src="..//image/dog.png"Menu Item 1">
+          <h3>Happy Dog</h3>
+          <p>Age 5</p>
+        </div>
+        <div class="menu-item">
+          <img src="..//image/cat.png" alt="Menu Item 2">
+          <h3>Happy Cat</h3>
+          <p>Age 2</p>
+        </div>
+        <div class="menu-item">
+          <img src="..//image/ham.png" alt="Menu Item 3">
+          <h3>Happy Ham</h3>
+          <p>Age 2</p>
+        </div>
+        <div class="menu-item">
+          <img src="..//image/rabbit.png" alt="Menu Item 4">
+          <h3>Happy Rabbit</h3>
+          <p>Age 1</p>
+        </div>
+      </section>
+    </main>    
+    <hr>
     <div class="mapbox">
       <div id="map"></div>
-      <strong>Contacts us</strong>
-      <p>email: admin@healingCafe.com
-      <p>phone: 02-0000-0000</p>
-      <p>fax: 02-0000-0000</p>
+      <div class="forest-info">
+        <strong>Healing Forest</strong>
+        <p>Welcome to the Healing Forest. Escape the hustle and bustle of the city and immerse yourself in the tranquility of nature. Explore our trails, enjoy the serene environment, and rejuvenate your spirit.</p>
+        <p>Location: 123 Forest Road, Natureville</p>
+        <p>Opening Hours: 8:00 AM - 6:00 PM daily</p>
+      </div>
     </div>
+                
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>About Us</h3>
+          <p>We are a cafe that serves happiness and comfort.</p>
+        </div>
+        <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li style="color: black;"><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h3>Contact Us</h3>
+          <p>Email: admin@healingCafe.com</p>
+          <p>Phone: 02-0000-0000</p>
+          <p>Fax: 02-0000-0000</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Healing Cafe | Designed by Your Name</p>
+      </div>
+    </footer>
 
   <script>
       var map = new naver.maps.Map('map', {
           center: new naver.maps.LatLng(37.5665, 126.9780),
-          zoom: 15
+          zoom: 10
       });
   </script>
   <br>
