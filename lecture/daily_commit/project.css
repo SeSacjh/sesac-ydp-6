@@ -8,6 +8,7 @@
   body {
     margin: 0 20px; /* 페이지 양옆에 20px 여백을 줍니다. */    
     font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
     background-color: #f4f4f4;    
   }
 
@@ -109,45 +110,6 @@
 
 /************** main 구간 ***************/
 main {
-  padding: 20px;
-}
-
-.menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
-  grid-gap: 20px;
-}
-
-.menu-item {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-
-.menu-item img {
-  max-width: 100%;
-}
-
-.menu-item h3 {
-  margin: 10px 0;
-}
-
-.menu-item p {
-  font-size: 14px;
-}
-
-.mapbox {
-  text-align: right;
-}
-
-#map {
-  margin-left: 800px;
-  width: 800px;
-  height: 400px;
-  border: 1px solid gray;
-}
-
-main {
   padding: 40px 20px;
   background-color: #fff;
 }
@@ -189,6 +151,27 @@ main {
   color: #555;
 }
 
+/**************** map 구간 ***************/
+.mapbox {
+  margin: 40px 0;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+  width: 100%;
+  max-width: 800px; /* 최대 너비를 설정하여 부모 요소의 너비보다 커지지 않도록 함 */
+  height: 400px;
+  margin: 0 auto; /* 중앙 정렬을 위해 추가 */
+  border: none;
+  border-radius: 8px;
+}
+
+
+/************** footer 구간 ***************/
 footer {
   background-color: #f8f9fa;
   color: black;  
@@ -212,9 +195,8 @@ footer {
   font-size: 18px;
 }
 
-.footer-section p,
-.footer-section ul {
-  font-size: 14px;
+.footer-section p, .footer-section ul {
+  font-size: 14px;  
 }
 
 .footer-section ul {
@@ -241,74 +223,5 @@ footer {
   color: #bbb;
 }
 
-/* map */
 
-.mapbox {
-  margin: 40px 0;
-  text-align: center;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.mapbox {
-  margin: 40px 0;
-  text-align: center;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#map {
-  width: 100%;
-  max-width: 800px; /* 최대 너비를 설정하여 부모 요소의 너비보다 커지지 않도록 함 */
-  height: 400px;
-  margin: 0 auto; /* 중앙 정렬을 위해 추가 */
-  border: none;
-  border-radius: 8px;
-}
-
-.forest-info {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.forest-info strong {
-  font-size: 24px;
-  display: block;
-  margin-bottom: 10px;
-  color: #2c3e50;
-}
-
-.forest-info p {
-  margin: 10px 0;
-  font-size: 16px;
-  color: #34495e;
-}
-
-.contact-info {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.contact-info strong {
-  font-size: 20px;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.contact-info p {
-  margin: 5px 0;
-  font-size: 16px;
-}
-
-.contact-info a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
