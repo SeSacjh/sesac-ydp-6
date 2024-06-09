@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Ownglyph_ryuttung-Rg';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_ryuttung-Rg.woff2') format('woff2');  
-}
-
+    font-family: 'Ownglyph_ryuttung-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_ryuttung-Rg.woff2') format('woff2');  
+  }
+  
 * {
   font-family: 'Ownglyph_ryuttung-Rg';
   font-size: 20px;
@@ -23,13 +23,13 @@
 
   .navbar a {
     font-size: 14px;
-  }
+  }  
 }
 
 body {
-  margin: 0 20px;
-  scroll-behavior: smooth;
-  background-color: #f4f4f4;
+    margin: 0 20px;
+    scroll-behavior: smooth;  
+    background-color: #f4f4f4;    
 }
 
 .home img{
@@ -42,33 +42,33 @@ body {
 }
 
 #wrapper {    
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-  position: relative;
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    position: relative;
 }
 
 #sidebar-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 250px;
-  background-color: #f8f9fa;
-  border-right: 1px solid #e7e7e7;
-  transform: translateX(-250px);
-  transition: transform 0.5s ease-out;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #e7e7e7;
+    transform: translateX(-250px);
+    transition: transform 0.5s ease-out;
+    z-index: 1000;
 }
 
 #wrapper.toggled #sidebar-wrapper {
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 #page-content-wrapper {
-  width: 100%;
-  padding: 0 20px;
-  /* margin: 0 0 0 250px;     */
+    width: 100%;
+    padding: 0 20px;
+    /* margin: 0 0 0 250px;     */
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -76,21 +76,21 @@ body {
 }
 
 .sidebar-heading {
-  margin-top: 100px;
-  background: url(../image/quokka.jpg) no-repeat;
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;    
-  margin: 50px 50px;
-  background-size: cover;
-  padding: 0.875rem 1.25rem;    
-  font-size: 1.2rem;
+    margin-top: 100px;
+    background: url(../image/quokka.jpg) no-repeat;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;    
+    margin: 50px 50px;
+    background-size: cover;
+    padding: 0.875rem 1.25rem;    
+    font-size: 1.2rem;
 }
 
 h6 {    
-  text-align: center;
-  pointer-events: none;
-  height: 50px;    
+    text-align: center;
+    pointer-events: none;
+    height: 50px;    
 }
 
 .btnMenu {     
@@ -98,18 +98,18 @@ h6 {
 }
 
 .btnMenu:hover {
-  background-color: #e7e7e7;
+    background-color: #e7e7e7;
 }
 
 .btnMenu.menuOn {
-  transform: translateY(0) rotate(90deg);
+    transform: translateY(0) rotate(90deg);
 }
 
 button {
-  cursor: pointer;
-  box-sizing: border-box;
-  border: none;
-  background: none;    
+    cursor: pointer;
+    box-sizing: border-box;
+    border: none;
+    background: none;    
 }
 
 .summaryTemperatureHover-DS-EntryPoint1-1 {
@@ -123,7 +123,8 @@ button {
   line-height: 62px;    
   align-items: center;
   align-content: center;
-  direction: ltr;  
+  direction: ltr;
+  /* display: flex; */
 }
 
 a:-webkit-any-link {
@@ -131,17 +132,7 @@ a:-webkit-any-link {
   cursor: pointer;    
 }
 
-/************** main 구간 ***************/
-.carousel-inner {
-  height: 450px; /* 슬라이드 높이 조절 */  
-}
-.carousel-item img {  
-  width: 100%;
-  height: 450px;
-  object-fit: cover;  
-  border-radius: 20px;
-}
-
+/************** Main 구간 ***************/
 main {
   padding: 40px 20px;
   background-color: #fff;
@@ -150,7 +141,7 @@ main {
 .menu {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -164,7 +155,7 @@ main {
   transition: transform 0.3s;
 }
 
-.menu-item:hover {
+.menu-item:hover {  
   background-color: blanchedalmond;
   transform: scale(1.05);
 }
@@ -186,23 +177,37 @@ main {
   color: #555;
 }
 
-/**************** map 구간 ***************/
-.mapbox {
-  margin: 40px 0;
-  text-align: center;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/************** 문의하기 ***************/
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-#map {
-  width: 100%;
-  max-width: 800px;
-  height: 400px;
-  margin: 0 auto;
-  border: 1px solid skyblue;
-  border-radius: 8px;
+.contact form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact form input, .contact form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+}
+
+.contact form button {
+  padding: 10px;
+  font-size: 1.2em;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.contact form button:hover {
+  background: #555;
 }
 
 /************** footer 구간 ***************/
@@ -211,7 +216,7 @@ footer {
   color: #bbb;  
   text-align: center;
 }
-
+  
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -271,10 +276,10 @@ footer {
 }
 
 .login-form button:hover {
-  background: #555;
+    background: #555;
 }
 
-/*********** 퀵메뉴 ***********/
+/* 퀵메뉴 */
 .quick-menu {
   position: fixed;
   top: 650px;

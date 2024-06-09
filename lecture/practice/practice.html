@@ -46,5 +46,18 @@
       </ul>
       <span>LOGIN</span>
     </header>
+
+    <a href="#" class="list-group-item list-group-item-action bg-light login-btn" onclick="openLoginForm()">Login</a>
+
+    <script src="scripts.js"></script>
+    <script>    
+      document.querySelector('.btnMenu').addEventListener('click', function() {
+          this.classList.toggle('menuOn');
+      });  
+      document.getElementById("menu-toggle").addEventListener("click", function(e) {
+        e.preventDefault();
+        document.getElementById("wrapper").classList.toggle("toggled");
+      });
+    </script> 
   </body>
 </html>

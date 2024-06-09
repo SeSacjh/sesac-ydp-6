@@ -52,3 +52,32 @@
   .header3 {
   }
   
+
+  .quick-menu {
+    position: fixed;
+    top: 60%;
+    left: 0;
+    transform: translateY(-50%);    
+    background: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    list-style: none;
+}
+
+.quick-menu li {
+    margin: 0;
+}
+
+.quick-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;    
+}
+
+.quick-menu li a:hover {
+    background: #333;
+    color: #fff;
+}
+
