@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-const server = http.createServer((req,res)=> {
+const server = http.createServer((req,res)=> { // req: 클라이언트 요청 객체, res: 서버의 응답 객체
     let path ="./views/"
     switch(req.url){
         case '/':
