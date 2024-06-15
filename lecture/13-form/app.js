@@ -22,20 +22,25 @@ app.get('/', (req, res) => {
 
 app.get('/getForm', (req, res) => {
     console.log(req.query); // { id: 'banana', pw: '1234' }
-    res.send('get 요청 성공!')
+    // res.send('get 요청 성공!')
+    res.render('result', { title: 'GET 요청 결과', userInfo: req.query });
+    // userInfo: req.query => userInfo: { id: 'banana', pw: '1234' }
 })
 
 app.post('/postForm', (req, res) => { 
     console.log(req.body); // { id: 'apple', pw: '1234' }
-    res.send('post 요청 성공!')
+    // res.send('post 요청 성공!')
+    res.render('result', { title: 'POST 요청 결과', userInfo: req.body } )
 })
 
 // res.send(): 문자열, JSON, 파일 등을 클라이언트에게 응답 (JSON을 가장 많이 응답)
 //  => 서버가 데이터를 응답할 때 send() 사용
-// res.render(): 템플릿 엔진을 사용해서 서브 측에서 "동적으로" HTML을 생성하고 클라이언트에게 응답
+// res.render(뷰, 데이터): 템플릿 엔진을 사용해서 서브 측에서 "동적으로" HTML을 생성하고 클라이언트에게 응답
 //  => 서버 측에서 동적으로 페이지를 렌더링할 때 render() 사용
+// => 뷰: views/ 폴더의 ejs 파일을 연결
+// => 데이터: 뷰에 넣어줄 정보
 
 // listen(포트번호, 서버가 실행되었을 때 실행할 콜백함수): 서버 시작 메서드
 app.listen(PORT, () => {
-    console.log(`http://localhost:${PORT}`);
+    console.log(`Start server!!! http://localhost:${PORT}`);
 })
