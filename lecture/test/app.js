@@ -1,23 +1,45 @@
-let product, price;
+const express = require('express');
+const multer = require('multer');
+const path = require('path');
+const app = express();
+const PORT = 8000;
 
-function goMart() {
-  console.log(`마트에 가서 어떤 음료를 살지 고민한다..`);
-}
+app.set('view engine', 'ejs');
+app.set('views', 'views'); 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use('/uploaded', express.static(__dirname + '/uploaded'));
 
-function pickDrink(callback) {
-  setTimeout(function () {
-    console.log(`고민 끝`);
-    product = `제로콜라`;
-    price = `3000원`;
-    callback();  // pickDrink가 완료된 후에 콜백 함수 호출
-  }, 3000);
-}
+const uploadDetail = multer({
+  storage: multer.diskStorage({
+      destination(req, file, done) {
+          done(null, 'uploaded/')
+      },
+      filename(req, file, done) {
+          const ext = path.extname(file.originalname);
+          done(null, path.basename(file.originalname, ext) + Date.now() + ext);
+      }
+  }),
+  limits: {fileSize: 5 * 1024 * 1024}
+});
 
-function pay() {
-  setTimeout(function () {
-    console.log(`상품명: ${product} // 가격: ${price}`);
-  }, 5000);
-}
+app.post("/register", uploadDetail.single('userfile'), (req, res) => {
+  console.log(req.body);
+  console.log(req.file);
 
-goMart();
-pickDrink(pay);
+  res.render('upload', { 
+      src: req.file.path,
+      userid: req.body.userid,
+      userpw: req.body.userpw,
+      username: req.body.username,
+      userage: req.body.userage
+  });
+});
+
+app.get('/', (req, res) => {
+  res.render('index', { title: '가입하세요' });
+});
+
+app.listen(PORT, () => {
+  console.log(`http://localhost:${PORT}`);
+});
