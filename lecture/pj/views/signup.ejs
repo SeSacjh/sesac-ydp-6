@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+    <form name="form_register">      
+        <label for="userId">ID</label>
+        <input type="text" name="userId" id="userId" required>
+        <br>
+        <label for="pw">Password</label>
+        <input type="password" name="pw" id="pw" required>
+        <br>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <button type="button" onclick="register();">Register</button>
+        <br>
+    </form>  
+    <a href="/user/signin">Login</a>
+  
+  <script>
+    function register() {
+      const form = document.forms['form_register'];
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      axios({
+          method: 'POST',
+          url: '/user/signup',
+          data: {
+            userId: form.userId.value,
+            pw: form.pw.value,
+            name: form.name.value,
+          },
+        })
+        .then((res) => {
+          console.log(res)
+          return res.data;
+        })
+        .then(() => {
+          console.log('create >> ', );
+          // (1) alert 띄우기
+          alert('회원가입 성공');
+          // (2) 가입 성공시 로그인 페이지로 이동
+          // document.location.href란?
+          // javascript에서 페이지 이동할 수 있는 방법
+          // document 객체를 사용하기 때문에 프론트에서 사용 가능
+          document.location.href = '/user/signin';
+        });
+    }
+  </script>
+  </body>
+</html>
