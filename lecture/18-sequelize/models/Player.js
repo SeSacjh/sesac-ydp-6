@@ -24,7 +24,7 @@ const playerModel = (sequelize, DataTypes) => {
                 // age int not null
                 type: DataTypes.INTEGER,
                 allowNull: false,
-            }    
+            }
         },
         // param3: 모델 옵션 정의
         {
